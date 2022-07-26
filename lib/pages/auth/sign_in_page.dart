@@ -92,27 +92,28 @@ class SignInPage extends StatelessWidget {
             ),
             SizedBox(height: Dimensions.screenHeight*0.05,),
             //sign in button
-            Container(
-              width: Dimensions.screenWidth/2,
-              height: Dimensions.screenHeight/13,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(Dimensions.radius30),
-                  color: AppColors.mainColor
-              ),
-              child: GestureDetector(
-                onTap: (){
-                  Get.toNamed(RouteHelper.homePagee);
+            GestureDetector(
+              onTap: (){
+                Get.toNamed(RouteHelper.homePagee);
 
-                },
-                child: Center(
-                  child: BigText(text: "Sign in",
-                    size: Dimensions.font20+Dimensions.font20/2,
-                    color: Colors.white,
+              },
+              child: Container(
+                width: Dimensions.screenWidth/2,
+                height: Dimensions.screenHeight/13,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimensions.radius30),
+                    color: AppColors.mainColor
+                ),
+                  child: Center(
+                    child: BigText(text: "Sign in",
+                      size: Dimensions.font20+Dimensions.font20/2,
+                      color: Colors.white,
+                    ),
+
                   ),
 
-                ),
-              ),
 
+              ),
             ),
             SizedBox(height: Dimensions.screenHeight*0.05,),
             //sign up options
